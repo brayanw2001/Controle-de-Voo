@@ -1,5 +1,4 @@
-// ControleDeVoo.cpp : Este arquivo contém a função 'main'. A execução do programa começa e termina ali.
-//
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -113,3 +112,29 @@ dados* excluiMaiorPrior(dados* tarefas, int* numTarefas)
 	return tarefasRaealocado = (dados*)realloc(tarefas, (sizeof(dados) * (*numTarefas)) );
 }
 
+void alterarPrioridade(dados* tarefas, int numTarefas)
+{
+	int num, novaPrioridade;
+
+	printf("\n============== EDITAR PRIORIDADE ==============");
+	for (int i = 0; i < numTarefas; i++)
+	{
+		printf("\n[%d] - Tarefa: %s \n      Prioridade: %d", i, tarefas[i].tarefa, tarefas[i].prior);
+		printf("\n");
+	}
+	
+	printf("\nInsira qual das tarefas deseja mudar: ");
+	scanf("%d", &num);
+
+	printf("\nInsira a nova prioridade: ");
+	scanf("%d", &novaPrioridade);
+
+	tarefas[num].prior = novaPrioridade;
+
+	printf("Tarefa atualizada: \n");
+	printf("\n\nTarefa: %s \nPrioridade: %d\n", tarefas[num].tarefa, tarefas[num].prior);
+
+
+	printf("\n===============================================\n\n");
+
+}

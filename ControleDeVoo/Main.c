@@ -20,7 +20,7 @@ int main()
         printf("[1] - Criar Vetor\n"
                "[2] - Incrementar tarefas\n"
                "[3] - Excluir tarefa com maior prioridade\n"
-               "[4] - Alterar prioridade (em construção...)\n"
+               "[4] - Alterar prioridade (em construcao...)\n"
                "[5] - Arvore Binaria\n");
 
         printf("Insira a opcao: ");
@@ -48,6 +48,10 @@ int main()
 
             case 3:
                 tarefas = excluiMaiorPrior(tarefas, &numTarefas);
+                break;
+
+            case 4:
+                alterarPrioridade(tarefas, numTarefas);
                 break;
 
             case 5:
@@ -78,5 +82,5 @@ int main()
         }
     } while (opc != 8);
 
-    // não esquecer de limpar memoria
+    // nÃ£o esquecer de limpar memoria
 }
