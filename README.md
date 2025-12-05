@@ -1,4 +1,4 @@
-# ✈️ Sistema de Controle de Voo (Flight Control System)
+# ✈️ Sistema de Controle de Voo
 
 > Um sistema modular em C para gerenciamento de tarefas de controle aéreo, implementando alocação dinâmica, estruturas de dados avançadas e algoritmos de ordenação.
 
