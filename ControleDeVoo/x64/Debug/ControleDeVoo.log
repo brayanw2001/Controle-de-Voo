@@ -1,0 +1,6 @@
+﻿  ArvoreBinaria.c
+  ControleDeVoo.c
+  Main.c
+C:\Users\braya\OneDrive\Documentos\IFSC\2025.2\Prog 2\C_Eng_Eletronica\Diversos\ControleDeVoo\ControleDeVoo\Main.c(12,11): warning C4244: 'função': conversão de 'time_t' para 'unsigned int', possível perda de dados
+  Gerando Código...
+  ControleDeVoo.vcxproj -> C:\Users\braya\OneDrive\Documentos\IFSC\2025.2\Prog 2\C_Eng_Eletronica\Diversos\ControleDeVoo\x64\Debug\ControleDeVoo.exe
