@@ -16,6 +16,7 @@ int main()
     srand(time(NULL));
 
     int numTarefas, opc;
+    int controleDeSequencia = 0;
     dados* tarefas = NULL;
     no* arvoreBinaria = NULL;
 
@@ -26,7 +27,9 @@ int main()
                "[3] - Excluir tarefa com maior prioridade\n"
                "[4] - Alterar prioridade\n"
                "[5] - Arvore Binaria\n"
-               "[6] - Ordenar por prioridade\n");
+               "[6] - Ordenar por prioridade\n"
+               "[7] - * Mostrar tarefas *\n"
+               "[8] - Encerrar\n");
 
         printf("Insira a opcao: ");
         scanf("%d", &opc);
@@ -44,6 +47,8 @@ int main()
                 printf("\n");
                 tarefas = novaTarefa(numTarefas);
 
+                controleDeSequencia = 1;
+
                 break;
 
             case 2:
@@ -52,14 +57,33 @@ int main()
                 break;
 
             case 3:
+                if (controleDeSequencia == 0)
+                {
+                    printf("\nCrie tarefas antes de executar esse comando!\n\n");
+                    break;
+                }
+
                 tarefas = excluiMaiorPrior(tarefas, &numTarefas);
+                printf("\n");
                 break;
 
             case 4:
+                if (controleDeSequencia == 0)
+                {
+                    printf("\nCrie tarefas antes de executar esse comando!\n\n");
+                    break;
+                }
+
                 alterarPrioridade(tarefas, numTarefas);
                 break;
 
             case 5:
+                if (controleDeSequencia == 0)
+                {
+                    printf("\nCrie tarefas antes de executar esse comando!\n\n");
+                    break;
+                }
+
                 if (arvoreBinaria == NULL)
                 {
                     arvoreBinaria = insereNos(tarefas, numTarefas);
@@ -74,11 +98,23 @@ int main()
                 break;
 
             case 6:
+                if (controleDeSequencia == 0)
+                {
+                    printf("\nCrie tarefas antes de executar esse comando!\n\n");
+                    break;
+                }
+
                 ordenarPrioridade(tarefas, numTarefas);
                 printf("\n");
                 break;
-            // ... outros cases
-            case 9:
+
+            case 7:
+                if (controleDeSequencia == 0)
+                {
+                    printf("\nCrie tarefas antes de executar esse comando!\n\n");
+                    break;
+                }
+
                 printf("\n============== TAREFAS ==============");
 
                 for (int i = 0; i < numTarefas; i++)
@@ -103,8 +139,8 @@ void ordenarPrioridade (dados* tarefa, int numTarefas)
     printf("\n\n============== ORDENAR PRIORIDADE ==============\n");
  
     printf("[1] - QuickSort\n"
-          "[2] - BubbleSort\n"
-          "[3] - Voltar\n");
+           "[2] - BubbleSort\n"
+           "[3] - Voltar\n");
 
     printf("Insira a opcao: ");
     scanf("%d", &opc);
