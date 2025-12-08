@@ -7,6 +7,9 @@
 #include "ControleDeVoo.h"
 #include "ArvoreBinaria.h"
 #include "QuickSort.h"
+#include "BubbleSort.h"
+
+void ordenarPrioridade(dados* tarefa, int numTarefas);
 
 int main() 
 {
@@ -71,22 +74,50 @@ int main()
                 break;
 
             case 6:
-                quicksort(tarefas, numTarefas);
+                ordenarPrioridade(tarefas, numTarefas);
+                printf("\n");
                 break;
             // ... outros cases
             case 9:
-                printf("\n===== TAREFAS =====");
+                printf("\n============== TAREFAS ==============");
+
                 for (int i = 0; i < numTarefas; i++)
                 {
                     printf("\nDescricao: %s", tarefas[i].tarefa);
                     printf("\nPrioridade: %d", tarefas[i].prior);
                     printf("\n");
                 }
-                printf("==================\n\n");
+                printf("=======================================\n\n");
 
                 break;
         }
     } while (opc != 8);
 
     // não esquecer de limpar memoria
+}
+
+void ordenarPrioridade (dados* tarefa, int numTarefas)
+{
+    int opc = 0;
+
+    printf("\n\n============== ORDENAR PRIORIDADE ==============\n");
+ 
+    printf("[1] - QuickSort\n"
+          "[2] - BubbleSort\n"
+          "[3] - Voltar\n");
+
+    printf("Insira a opcao: ");
+    scanf("%d", &opc);
+
+    switch (opc)
+    {
+    case 1:
+        quicksort(tarefa, numTarefas);
+        break;
+    case 2:
+        bubbleSort(tarefa, numTarefas);
+        break;
+    }
+
+    printf("================================================\n");
 }

@@ -128,12 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArvoreBinaria.c" />
+    <ClCompile Include="BubbleSort.c" />
     <ClCompile Include="ControleDeVoo.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="QuickSort.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArvoreBinaria.h" />
+    <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="ControleDeVoo.h" />
     <ClInclude Include="QuickSort.h" />
   </ItemGroup>
