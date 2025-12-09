@@ -6,6 +6,7 @@
 
 #include "ControleDeVoo.h"
 #include "ArvoreBinaria.h"
+#include "QuickSort.h"
 
 int main() 
 {
@@ -20,8 +21,9 @@ int main()
         printf("[1] - Criar Vetor\n"
                "[2] - Incrementar tarefas\n"
                "[3] - Excluir tarefa com maior prioridade\n"
-               "[4] - Alterar prioridade (em construcao...)\n"
-               "[5] - Arvore Binaria\n");
+               "[4] - Alterar prioridade\n"
+               "[5] - Arvore Binaria\n"
+               "[6] - Ordenar por prioridade\n");
 
         printf("Insira a opcao: ");
         scanf("%d", &opc);
@@ -66,6 +68,10 @@ int main()
                 }
 
                 imprime(arvoreBinaria, 0);
+                break;
+
+            case 6:
+                quicksort(tarefas, numTarefas);
                 break;
             // ... outros cases
             case 9:

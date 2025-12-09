@@ -48,7 +48,6 @@ Thumbs.db
 *.suo
 *.user
 *.sln.docstates
-*.vcxproj
 .vscode/
 
 # Arquivos temporários
